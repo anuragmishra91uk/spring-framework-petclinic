@@ -15,7 +15,7 @@ variables:
   webAppName: 'my-app-name-anurag'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'Dev'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
