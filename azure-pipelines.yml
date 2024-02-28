@@ -21,6 +21,19 @@ variables:
   vmImageName: 'ubuntu-latest'
 
 stages:
+- stage: CheckJavaVersion
+  displayName: Check Java Version
+  jobs:
+  - job: CheckJavaVersionJob
+    displayName: Check Java Version
+    pool:
+      vmImage: $(vmImageName)
+
+    steps:
+    - script: |
+        java -version
+        echo $JAVA_HOME
+
 - stage: Build
   displayName: Build stage
   jobs:
